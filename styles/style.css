@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Shared Styles */
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: #1a0b2e;
+  color: white;
+}
+
+.hero-btn-1 {
+  width: 135px;
+  height: 44px;
+  background: linear-gradient(45deg, #fbd449, #ff1c6a, #9b04db);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50px;
+  
+}
+
+.hero-btn-1:hover{
+    filter: brightness(0.9);
+    cursor: pointer;
+}
+
+/* Header section styles */
+
+header > nav {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin-top: 16px;
+  /* border-bottom: 1px solid rgba(65, 37, 103, 1); */
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.nav-menu ul a {
+  font-size: 1rem;
+  font-weight: 500;
+}
