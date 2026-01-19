@@ -35,6 +35,17 @@ body {
   cursor: pointer;
 }
 
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.section-content {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 80%;
+}
+
 /* Header section styles */
 
 .nav-container {
@@ -70,7 +81,7 @@ body {
 
 /* banner section styles */
 
-.hero-bannner {
+.hero-banner {
   background: url(../assets/hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -138,7 +149,7 @@ body {
   justify-content: center;
 }
 
-#spotify-btn{
+#spotify-btn {
   padding: 12px 20px;
 }
 
@@ -160,15 +171,51 @@ body {
   filter: brightness(1.5);
 }
 
+/* about section styles */
 
+.about-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 120px;
+}
 
+.podcast-container > h1,
+p {
+  margin-bottom: 16px;
+}
 
+.about-container hr {
+  color: rgba(65, 37, 103, 1);
+  /* opacity: 10%; */
+  margin-top: 80px;
+  margin-bottom: 80px;
+  width: 75%;
+}
 
+.about-card-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+}
 
+.card > h1 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #00ff88;
+}
 
-
-
-
+.card > p {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 80%;
+}
 
 /* MOBILE RESPONSIVE */
 
@@ -189,18 +236,30 @@ body {
     height: 24px;
   }
 
-  .hero-banner{
+  .hero-banner {
     width: 100%;
     padding-bottom: 40px;
   }
 
-  .mic-container{
+  .mic-container {
     width: 250px;
     height: 250px;
   }
 
   .mic-img {
-  width: 80px;
-}
+    width: 80px;
+  }
 
+  .about-container {
+    padding: 40px 20px;
+  }
+
+  .about-container hr {
+    margin: 40px 0;
+  }
+
+  .about-card-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
 }
