@@ -462,10 +462,11 @@ footer {
   justify-items: center;
   padding: 120px;
   background-size: cover;
+  padding-top: 175px;
 }
 
 footer h2 {
-  font-size: 48px;
+  font-size: 65px;
   color: #ffffff;
   font-weight: bold;
   margin-bottom: 32px;
@@ -483,9 +484,8 @@ footer h2 {
 }
 
 footer .footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 32px;
+  display: flex;
+  margin-bottom: 25px;
   max-width: 544px;
   gap: 40px;
 }
@@ -644,8 +644,8 @@ footer .footer-container {
     text-align: center;
     padding: 40px 20px;
     background: url("../assets/footer-bg-mobile.png");
-    background-size: cover;
-    background-position: contain;
+    background-size: contain;
+    background-position: cover;
   }
 
   footer .footer-desclaimer {
@@ -653,8 +653,9 @@ footer .footer-container {
   }
 
   footer .footer-container {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 10px;
   }
 }
