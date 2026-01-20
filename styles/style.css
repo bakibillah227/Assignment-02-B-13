@@ -46,6 +46,37 @@ body {
   opacity: 80%;
 }
 
+/* badge and mic animation */
+
+@keyframes floatMic {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow:
+      0 0 25px rgba(0, 255, 136, 1),
+      0 0 40px rgba(0, 255, 136, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+  }
+}
+
 /* Header section styles */
 
 .nav-container {
@@ -116,6 +147,7 @@ body {
 .mic-img {
   width: 150px;
   height: auto;
+  animation: floatMic 3s ease-in-out infinite;
 }
 
 .badge-new {
@@ -129,6 +161,9 @@ body {
   padding: 6px 14px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+
+  animation: glowPulse 2s infinite ease-in-out;
+  cursor: default;
 }
 
 .banner-title {
@@ -378,7 +413,7 @@ p {
   padding: 48px 40px;
 }
 
-.host-img img{
+.host-img img {
   height: 100%;
   width: 400px;
 }
@@ -418,62 +453,65 @@ p {
   cursor: pointer;
 }
 
-
 /* footer related styles */
 
-footer{
+footer {
   background: url(../assets/footer-bg.png);
   background-position: center;
-    background-repeat: no-repeat;
-    justify-items: center;
-    padding: 120px;
-    background-size: cover;
+  background-repeat: no-repeat;
+  justify-items: center;
+  padding: 120px;
+  background-size: cover;
 }
 
-footer h2{
-    font-size: 48px;
-    color: #FFFFFF;
-    font-weight: bold;
-    margin-bottom: 32px;
+footer h2 {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 32px;
 }
 
-.gradiant-color{
-     background: linear-gradient(45deg, rgba(247, 233, 63, 1) 0%, rgba(251, 9, 180, 1) 51%, rgba(145, 0, 248, 1) 100%);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+.gradiant-color {
+  background: linear-gradient(
+    45deg,
+    rgba(247, 233, 63, 1) 0%,
+    rgba(251, 9, 180, 1) 51%,
+    rgba(145, 0, 248, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-footer .footer-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 32px;
-    max-width: 544px;
-    gap: 40px;
+footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 32px;
+  max-width: 544px;
+  gap: 40px;
 }
-.footer-card{
-    display: flex;
-    gap: 8px;
-    margin-bottom: 32px;
+.footer-card {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
 }
-.footer-card img{
-    height: 24px;
-    width: 24px;
-    cursor: pointer;
+.footer-card img {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
 }
-.footer-card p{
-    color: #FFFFFF;
-    font-size: 1rem;
-    font-weight: 500;
-    opacity: 60%;
-    align-items: center;
+.footer-card p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 60%;
+  align-items: center;
 }
-.footer-desclaimer{
-    color: #FAFAFA;
-    font-size: 1rem;
-    line-height: 24px;
-    opacity: 60%;
+.footer-desclaimer {
+  color: #fafafa;
+  font-size: 1rem;
+  line-height: 24px;
+  opacity: 60%;
 }
-
 
 /* MOBILE RESPONSIVE */
 
@@ -569,10 +607,10 @@ footer .footer-container{
     font-size: 29px;
   }
 
-  .host-img img{
-  height: 100%;
-  width: auto;
-}
+  .host-img img {
+    height: 100%;
+    width: auto;
+  }
 
   .host-info {
     flex-direction: column;
@@ -596,27 +634,20 @@ footer .footer-container{
   }
 
   footer {
-        text-align: center;
-        padding: 40px 20px;
-        background: url("../assets/footer-bg.png");
-        background-size: cover;
-        background-position: center;
-    }
-    footer .footer-desclaimer{
-        font-size: 13px;
-    }
-    footer .footer-container{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-bottom: 10px;
-    }
-    /* .banner-images{
-        position: absolute;
-        top: 4%;
-        right: 28%;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 8px 16px;
-    } */
+    text-align: center;
+    padding: 40px 20px;
+    background: url("../assets/footer-bg-mobile.png");
+    background-size: cover;
+    background-position: center;
+  }
 
+  footer .footer-desclaimer {
+    font-size: 0.8rem;
+  }
+
+  footer .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 }
