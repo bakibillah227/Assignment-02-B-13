@@ -645,7 +645,7 @@ footer .footer-container {
     padding: 40px 20px;
     background: url("../assets/footer-bg-mobile.png");
     background-size: cover;
-    background-position: center;
+    background-position: contain;
   }
 
   footer .footer-desclaimer {
