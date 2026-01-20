@@ -378,9 +378,9 @@ p {
   padding: 48px 40px;
 }
 
-.host-img{
-  height: 230px;
-  width: 230px;
+.host-img img{
+  height: 100%;
+  width: 400px;
 }
 .host-box > h2 {
   color: #ffffff;
@@ -417,6 +417,63 @@ p {
   border: 1px solid #533c72;
   cursor: pointer;
 }
+
+
+/* footer related styles */
+
+footer{
+  background: url(../assets/footer-bg.png);
+  background-position: center;
+    background-repeat: no-repeat;
+    justify-items: center;
+    padding: 120px;
+    background-size: cover;
+}
+
+footer h2{
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+
+.gradiant-color{
+     background: linear-gradient(45deg, rgba(247, 233, 63, 1) 0%, rgba(251, 9, 180, 1) 51%, rgba(145, 0, 248, 1) 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 32px;
+    max-width: 544px;
+    gap: 40px;
+}
+.footer-card{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+.footer-card img{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+.footer-card p{
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 60%;
+    align-items: center;
+}
+.footer-desclaimer{
+    color: #FAFAFA;
+    font-size: 1rem;
+    line-height: 24px;
+    opacity: 60%;
+}
+
 
 /* MOBILE RESPONSIVE */
 
@@ -512,6 +569,11 @@ p {
     font-size: 29px;
   }
 
+  .host-img img{
+  height: 100%;
+  width: auto;
+}
+
   .host-info {
     flex-direction: column;
     max-width: 1200px;
@@ -532,4 +594,29 @@ p {
     gap: 8px;
     margin: 0 auto;
   }
+
+  footer {
+        text-align: center;
+        padding: 40px 20px;
+        background: url("../assets/footer-bg.png");
+        background-size: cover;
+        background-position: center;
+    }
+    footer .footer-desclaimer{
+        font-size: 13px;
+    }
+    footer .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    /* .banner-images{
+        position: absolute;
+        top: 4%;
+        right: 28%;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 16px;
+    } */
+
 }
